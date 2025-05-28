@@ -6,12 +6,16 @@
 //
 
 import SwiftUI
+import ComposableArchitecture
 
 @main
 struct ComposableWeatherApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WeatherView(store: Store(initialState: WeatherReducer.State()) {
+                WeatherReducer()
+                    .dependency(\.weatherClient, .liveValue)
+            })
         }
     }
 }
