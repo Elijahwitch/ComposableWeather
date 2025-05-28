@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		6A2787912DDF134B00AEC33B /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 6A2787902DDF134B00AEC33B /* ComposableArchitecture */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		6A27877A2DDF11BF00AEC33B /* ComposableWeather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ComposableWeather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A2787912DDF134B00AEC33B /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = ComposableWeather;
 			packageProductDependencies = (
+				6A2787902DDF134B00AEC33B /* ComposableArchitecture */,
 			);
 			productName = ComposableWeather;
 			productReference = 6A27877A2DDF11BF00AEC33B /* ComposableWeather.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = 6A2787712DDF11BF00AEC33B;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6A27878F2DDF134B00AEC33B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6A27877B2DDF11BF00AEC33B /* Products */;
 			projectDirPath = "";
@@ -324,6 +333,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6A27878F2DDF134B00AEC33B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.19.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6A2787902DDF134B00AEC33B /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A27878F2DDF134B00AEC33B /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6A2787722DDF11BF00AEC33B /* Project object */;
 }
