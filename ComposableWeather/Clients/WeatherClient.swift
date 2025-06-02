@@ -6,6 +6,8 @@ struct WeatherClient: Sendable {
     var fetchWeather: @Sendable (String) async throws -> WeatherResponse
     var fetchMultiple: @Sendable ([String]) async throws -> [WeatherResponse]
 }
+// WeatherClient는 모델 WearherResponse를 UI에 보낼 수 있는 문자열과 비동기 방식으로 받는 두 개의 변수로 정의. 
+
 
 // MARK: - WeatherClient DependencyKey
 extension WeatherClient: DependencyKey {
@@ -33,7 +35,7 @@ extension WeatherClient: DependencyKey {
                 return results
             }
         }
-
+        
         return WeatherClient(fetchWeather: fetch, fetchMultiple: fetchMultiple)
     }()
 }
