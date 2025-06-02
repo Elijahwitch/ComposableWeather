@@ -5,7 +5,9 @@ import ComposableArchitecture
 import Foundation
 
 @Reducer
+
 struct WeatherReducer {
+    // 리듀서는 날씨에 관련된 상태 변화를 관리합니다.
     
     struct State: Equatable {
         var city: String = ""
@@ -24,7 +26,7 @@ struct WeatherReducer {
         case fetchWeather
         case weatherResponse(Result<WeatherResponse, Error>)
     }
-
+    // 리듀서의 의존성으로 WeatherClient를 주입.
     @Dependency(\.weatherClient) var weatherClient
 
     func reduce(into state: inout State, action: Action) -> Effect<Action> {
